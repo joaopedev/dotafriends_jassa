@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "../pages/loginFriends";
+import Home from "../pages/homeFriends";
 import { AuthProvider } from "../context/authContext";
 
 const AppRoutes: React.FC = () => {
@@ -8,7 +8,7 @@ const AppRoutes: React.FC = () => {
     <BrowserRouter>
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
