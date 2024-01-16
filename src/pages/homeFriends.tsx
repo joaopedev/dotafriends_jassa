@@ -1,6 +1,5 @@
 import { Box, Flex, VStack, useBreakpointValue } from "@chakra-ui/react";
 import LoginForm from "../components/homeForm";
-import { AuthProvider } from "../context/authContext";
 import image from "../images/wallpaperflare.com_wallpaper.jpg";
 import Footer from "../components/footer";
 
@@ -12,9 +11,7 @@ export const LoginFriends: React.FC = () => {
       <Flex justifyContent="center" alignItems="center" h="95vh">
         <VStack>
           <Box width={boxWidth} p={15}>
-            <AuthProvider>
               <LoginForm />
-            </AuthProvider>
           </Box>
         </VStack>
       </Flex>
