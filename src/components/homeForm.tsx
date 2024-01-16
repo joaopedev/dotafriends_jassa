@@ -27,8 +27,19 @@ export const HomeForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [isEmailSent, setIsEmailSent] = useState(false);
 
+  const isValidEmail = (email: string): boolean => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailRegex.test(email);
+  };
+
   const handleSendClick = async () => {
     try {
+      if (!isValidEmail(email)) {
+        setIsEmailSent(false);
+        onOpen();
+        return;
+      }
+
       const response = await axios.post(
         `http://localhost:3005/enviar-email`,
         {

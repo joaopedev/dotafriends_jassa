@@ -8,7 +8,8 @@ export const Footer: React.FC = () => {
   return (
     <Box>
       <Container as={Stack} maxW={"6xl"} py={4} align="center">
-      <Text>© {getCurrentYear()} Joao Pedro Sousa. All rights reserved.</Text>      </Container>
+        <Text textColor="white">© {getCurrentYear()} Joao Pedro Sousa. All rights reserved.</Text>{" "}
+      </Container>
     </Box>
   );
 };

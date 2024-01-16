@@ -1,59 +1,48 @@
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
+# Jassa DOTA Friends App
 
-## Available Scripts
+Este projeto é uma aplicação em React com TypeScript, utilizando ChakraUI para estilização. A aplicação foi criada com o intuito de permitir que pessoas joguem Dota 2 com o criador da aplicação. O projeto conta com um frontend básico contendo apenas uma tela e um backend em Node.js para o envio de e-mails.
 
-In the project directory, you can run:
+## Como Começar
 
-### `npm start`
+Para executar a aplicação localmente, siga estes passos:
 
-Runs the app in the development mode.<br /> Open
-[http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone o repositório:
 
-The page will reload if you make edits.<br /> You will also see any lint errors
-in the console.
+    ```bash
+    git clone https://github.com/seu-nome-de-usuario/jassa-dota-friends.git
+    cd jassa-dota-friends
+    ```
 
-### `npm test`
+2. Instale as dependências:
 
-Launches the test runner in the interactive watch mode.<br /> See the section
-about
-[running tests](https://facebook.github.io/create-react-app/docs/running-tests)
-for more information.
+    ```bash
+    npm install
+    ```
 
-### `npm run build`
+3. Inicie o servidor de desenvolvimento:
 
-Builds the app for production to the `build` folder.<br /> It correctly bundles
-React in production mode and optimizes the build for the best performance.
+    ```bash
+    npm start
+    ```
 
-The build is minified and the filenames include the hashes.<br /> Your app is
-ready to be deployed!
+    A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
 
-See the section about
-[deployment](https://facebook.github.io/create-react-app/docs/deployment) for
-more information.
+## Scripts Disponíveis
 
-### `npm run eject`
+No diretório do projeto, você pode executar os seguintes scripts:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- `npm start`: Inicia a aplicação em modo de desenvolvimento.
+- `npm test`: Inicia o executor de testes em modo interativo.
+- `npm run build`: Compila a aplicação para produção no diretório `build`.
+- `npm run eject`: Ejeta a aplicação do Create React App (use com cuidado).
 
-If you aren’t satisfied with the build tool and configuration choices, you can
-`eject` at any time. This command will remove the single build dependency from
-your project.
+## Backend
 
-Instead, it will copy all the configuration files and the transitive
-dependencies (webpack, Babel, ESLint, etc) right into your project so you have
-full control over them. All of the commands except `eject` will still work, but
-they will point to the copied scripts so you can tweak them. At this point
-you’re on your own.
+A aplicação inclui um backend construído com Node.js para funcionalidades relacionadas ao envio de e-mails. Certifique-se de que o servidor backend esteja em execução antes de utilizar recursos relacionados a e-mails.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for
-small and middle deployments, and you shouldn’t feel obligated to use this
-feature. However we understand that this tool wouldn’t be useful if you couldn’t
-customize it when you are ready for it.
+Para iniciar o servidor backend, navegue até o diretório `backend` e execute:
 
-## Learn More
-
-You can learn more in the
-[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+cd backend
+npm install
+npm start
