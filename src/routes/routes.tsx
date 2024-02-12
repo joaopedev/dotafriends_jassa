@@ -5,9 +5,9 @@ import Home from "../pages/homeFriends";
 const AppRoutes: React.FC = () => {
   return (
     <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </BrowserRouter>
   );
 };
