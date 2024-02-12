@@ -11,7 +11,7 @@ export const LoginFriends: React.FC = () => {
       <Flex justifyContent="center" alignItems="center" h="95vh">
         <VStack>
           <Box width={boxWidth} p={15}>
-              <LoginForm />
+            <LoginForm />
           </Box>
         </VStack>
       </Flex>
