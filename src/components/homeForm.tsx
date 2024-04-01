@@ -32,6 +32,8 @@ export const HomeForm: React.FC = () => {
     return emailRegex.test(email);
   };
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   const handleSendClick = async () => {
     if (!isValidEmail(email)) {
       setErrorMessage("Por favor, insira um email válido.");
@@ -40,7 +42,7 @@ export const HomeForm: React.FC = () => {
     }
 
     try {
-      const response = await axios.post(`http://localhost:3005/enviar-email`, {
+      const response = await axios.post(`${apiUrl}enviar-email`, {
         email: email,
       });
       
@@ -65,20 +67,20 @@ export const HomeForm: React.FC = () => {
   };
 
   const modalHeader = isEmailSent
-    ? "Email enviado com sucesso!"
+    ? "Email successfully sent!"
     : errorMessage
-    ? "Erro ao enviar o email"
-    : "Email inválido";
+    ? "Error sending the e-mail."
+    : "Invalid email.";
 
   const modalBody = isEmailSent
-    ? "Você receberá um email com as instruções, bora jogar! :) "
+    ? "You will receive an email with instructions, let's play! :) "
     : errorMessage
     ? errorMessage
-    : "Por favor, insira um email válido.";
+    : "Please enter a valid email.";
 
   return (
     <ChakraProvider>
-      <Box boxShadow="md" rounded="md" bg="White" maxW="100%" p={6}>
+      <Box boxShadow="md" maxH="30%" rounded="md" bg="White" maxW="60%" p={6}>
         <VStack spacing={3}>
           <Image m={3} maxW="30%" src={png} />
           <FormControl m={3}>
@@ -87,16 +89,15 @@ export const HomeForm: React.FC = () => {
                 color="black"
                 m={3}
                 as="b"
+                textAlign="center"
               >
                 Welcome to Jassa DOTA 2 friends!
               </FormLabel>
-              <Text m={3} color="black" as="b">
-                {" "}
+              <Text  m={3} color="black" as="b" textAlign="center">
                 If you want a good friend to play DOTA 2 with, enter your email
                 to receive an email and let's get started!
               </Text>
             </VStack>
-
             <FormLabel as="b" color="black" m={3}>
               Email:
             </FormLabel>
