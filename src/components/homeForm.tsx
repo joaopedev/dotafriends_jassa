@@ -74,7 +74,7 @@ export const HomeForm: React.FC = () => {
     : "Invalid email.";
 
   const modalBody = isEmailSent
-    ? "You will receive an email with instructions, let's play! :) "
+    ? "You will receive an email with instructions, let's play!(Check your junk or spam folder) :) "
     : errorMessage
     ? errorMessage
     : "Please enter a valid email.";
@@ -110,6 +110,7 @@ export const HomeForm: React.FC = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                onSubmit={handleSendClick}
               />
             </VStack>
           </FormControl>
