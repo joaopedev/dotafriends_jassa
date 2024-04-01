@@ -16,17 +16,17 @@ export const LoginFriends: React.FC = () => {
       minH="100vh"
     >
       <VStack>
-        <VStack p={14}>
+        <VStack mt={12}>
           <LoginForm />
         </VStack>
       </VStack>
-      <Box mt={9}>
+      <Box mt={12}>
         <Container as={Stack} maxW={"6xl"} py={4} align="center">
-          <Text textColor="white">
+          <Text textAlign="center" textColor="white">
             © {getCurrentYear()} Joao Pedro Sousa. All rights reserved.
-          </Text>{" "}
+          </Text>
         </Container>
-      </Box>{" "}
+      </Box>
     </Box>
   );
 };

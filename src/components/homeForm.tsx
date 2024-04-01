@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, FormEvent } from "react";
 import {
   Button,
   FormControl,
@@ -34,7 +34,8 @@ export const HomeForm: React.FC = () => {
 
   const apiUrl = process.env.REACT_APP_API_URL;
 
-  const handleSendClick = async () => {
+  const handleSendClick = async ( e?: FormEvent) => {
+    if(e) e.preventDefault()
     if (!isValidEmail(email)) {
       setErrorMessage("Por favor, insira um email válido.");
       onOpen();
@@ -80,9 +81,9 @@ export const HomeForm: React.FC = () => {
 
   return (
     <ChakraProvider>
-      <Box boxShadow="md" maxH="30%" rounded="md" bg="White" maxW="60%" p={6}>
+      <Box boxShadow="md" m={5} maxWidth="80%" rounded="md" bg="White" p={6}>
         <VStack spacing={3}>
-          <Image m={3} maxW="30%" src={png} />
+          <Image m={3} maxW="20%" src={png} />
           <FormControl m={3}>
             <VStack>
               <FormLabel
@@ -112,7 +113,7 @@ export const HomeForm: React.FC = () => {
               />
             </VStack>
           </FormControl>
-          <Button mb={5} colorScheme="red" onClick={handleSendClick}>
+          <Button mb={5} colorScheme="red" type="submit" onClick={handleSendClick}>
             Send
           </Button>
         </VStack>
